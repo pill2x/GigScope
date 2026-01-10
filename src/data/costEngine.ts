@@ -1,5 +1,5 @@
 
-export type CostCategory = 'labor' | 'material' | 'software' | 'overhead' | 'fixed';
+export type CostCategory = 'labor' | 'material' | 'tools' | 'addons' | 'overhead' | 'fixed';
 
 export interface CostItem {
     id: string;
@@ -22,7 +22,8 @@ export interface CostItem {
 export interface QuoteCalculations {
     subtotalLabor: number;
     subtotalMaterials: number;
-    subtotalSoftware: number;
+    subtotalTools: number;
+    subtotalAddons: number;
     subtotalOverhead: number;
     totalCost: number;
     profitAmount: number;
@@ -32,7 +33,8 @@ export interface QuoteCalculations {
 export const calculateQuote = (items: CostItem[], profitMarginPercent: number): QuoteCalculations => {
     let subtotalLabor = 0;
     let subtotalMaterials = 0;
-    let subtotalSoftware = 0;
+    let subtotalTools = 0;
+    let subtotalAddons = 0;
     let subtotalOverhead = 0;
 
     items.forEach(item => {
@@ -56,20 +58,22 @@ export const calculateQuote = (items: CostItem[], profitMarginPercent: number): 
         switch (item.category) {
             case 'labor': subtotalLabor += cost; break;
             case 'material': subtotalMaterials += cost; break;
-            case 'software': subtotalSoftware += cost; break;
+            case 'tools': subtotalTools += cost; break;
+            case 'addons': subtotalAddons += cost; break;
             case 'overhead': subtotalOverhead += cost; break;
             default: subtotalLabor += cost; // Fallback
         }
     });
 
-    const totalCost = subtotalLabor + subtotalMaterials + subtotalSoftware + subtotalOverhead;
+    const totalCost = subtotalLabor + subtotalMaterials + subtotalTools + subtotalAddons + subtotalOverhead;
     const profitAmount = totalCost * (profitMarginPercent / 100);
     const totalPrice = totalCost + profitAmount;
 
     return {
         subtotalLabor,
         subtotalMaterials,
-        subtotalSoftware,
+        subtotalTools,
+        subtotalAddons,
         subtotalOverhead,
         totalCost,
         profitAmount,

@@ -12,9 +12,9 @@ export const UniversalScopeBuilder = () => {
 
     // The 5 Core V1 Sections
     const sections: { key: CostCategory; label: string; icon: any; color: string }[] = [
-        { key: 'labor', label: 'Labor & Services', icon: Clock, color: 'text-indigo-500' },
+        { key: 'labor', label: 'Labor & Services', icon: Clock, color: 'text-primary' },
         { key: 'material', label: 'Materials & Inputs', icon: Box, color: 'text-emerald-500' },
-        { key: 'tools', label: 'Tools & Licensing', icon: Wrench, color: 'text-blue-500' },
+        { key: 'tools', label: 'Tools & Licensing', icon: Wrench, color: 'text-primary' },
         { key: 'addons', label: 'Add-ons & Features', icon: Sparkles, color: 'text-amber-500' },
         { key: 'overhead', label: 'Operations & Overheads', icon: DollarSign, color: 'text-rose-500' },
     ];

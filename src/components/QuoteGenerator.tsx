@@ -78,8 +78,8 @@ export const QuoteGenerator = () => {
 
     const getTierColor = (id: string) => {
         switch (id) {
-            case 'conservative': return "text-blue-500 bg-blue-500/10 border-blue-200";
-            case 'standard': return "text-indigo-500 bg-indigo-500/10 border-indigo-200";
+            case 'conservative': return "text-slate-600 bg-slate-100 border-slate-200";
+            case 'standard': return "text-primary bg-primary/10 border-primary/20";
             case 'premium': return "text-amber-500 bg-amber-500/10 border-amber-200";
             default: return "text-slate-500";
         }

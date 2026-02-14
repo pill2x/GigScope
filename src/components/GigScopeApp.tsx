@@ -35,7 +35,7 @@ const GigScopeContent = () => {
             <header className="border-b bg-card/50 backdrop-blur-xl sticky top-0 z-50 transition-all duration-300">
                 <div className="container mx-auto px-4 h-16 flex items-center justify-between">
                     <div className="flex items-center gap-2 cursor-pointer" onClick={() => setStep("industry")}>
-                        <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white font-bold shadow-lg shadow-indigo-500/20">G</div>
+                        <img src="/GigScope Logo.png" alt="GigScope" className="h-10 w-auto object-contain" />
                         <h1 className="text-xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-foreground to-foreground/70">GigScope</h1>
                     </div>
                     {/* Progress Indicator */}

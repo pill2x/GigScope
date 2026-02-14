@@ -46,7 +46,7 @@
     --gradient-primary: linear-gradient(135deg, hsl(0, 0%, 12%) 0%, hsl(215, 28%, 17%) 100%);
     --gradient-secondary: linear-gradient(135deg, hsl(220 15% 98%) 0%, hsl(220 15% 94%) 100%);
     --gradient-hero: linear-gradient(135deg, hsl(0, 0%, 17%) 0%, hsl(215, 28%, 17%) 100%);
-    
+
     /* Professional shadows */
     --shadow-card: 0 2px 10px -2px hsl(220 15% 15% / 0.08);
     --shadow-hover: 0 8px 25px -5px hsl(195 100% 45% / 0.15);
